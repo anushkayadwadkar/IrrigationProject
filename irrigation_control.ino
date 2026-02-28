@@ -1,5 +1,5 @@
-int motorPin = 12; 
-int moisturePin = A0; 
+int motorPin = 2; 
+int moisturePin = 7 ; 
 int moisture = 0; 
 void setup() {
   // put your setup code here, to run once:
@@ -15,10 +15,10 @@ void loop() {
   
   if (moisture > 500) {
     Serial.println("turning motor ON");
-  digitalWrite(motorPin, LOW); 
+  digitalWrite(motorPin, HIGH); 
   delay(5000);
   } else {
     Serial.println("turning motor OFF");
-  digitalWrite(motorPin, HIGH);
+  digitalWrite(motorPin, LOW);
   }
 }
